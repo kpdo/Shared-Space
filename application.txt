@@ -1,0 +1,7 @@
+npm init -y
+npm install express --save
+npm install mustache-express --save
+
+install mustache extension in vscode
+npm install body-parser --save
+npm install nodemon -g
