@@ -200,6 +200,13 @@ MonoBehaviour:
   leftHand: {fileID: 52803830}
   rightHand: {fileID: 52803829}
   head: {fileID: 52803828}
+  vrHead: {fileID: 52803832}
+--- !u!4 &52803832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4357122362856218, guid: 54a613ba6e982e84db04156af08d6a89,
+    type: 3}
+  m_PrefabInstance: {fileID: 52803826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &127053256
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +683,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b0dc2ac664b484cec89abfefd3615e95, type: 2}
+  - {fileID: 2100000, guid: 71fc53fc2fd4ee14381b0e70e38a7041, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1424,7 +1431,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b0dc2ac664b484cec89abfefd3615e95, type: 2}
+  - {fileID: 2100000, guid: 71fc53fc2fd4ee14381b0e70e38a7041, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

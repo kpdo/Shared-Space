@@ -6,8 +6,7 @@ using Photon.Realtime;
 public class PhotonLobby : MonoBehaviourPunCallbacks
 {
     public static PhotonLobby lobby;
-    public GameObject startButton;
-
+    public UnityEngine.Events.UnityEvent onConnectedToMaster;
     private void Awake()
     {
         lobby = this;
@@ -21,7 +20,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         print("Player has connected to the Photon master server");
         PhotonNetwork.AutomaticallySyncScene = true;
-        startButton.SetActive(true);
+        onConnectedToMaster.Invoke();
     }
     public void JoinRandomRoom()
     {
