@@ -57,6 +57,14 @@ app.get('/testView2', (req, res)=>{
 
 //     //uses postgres for database, can use pgAdmin or sqlShell to interact with database manually    
 //     const client = new Client({
+//         user: 'vlkjlyefplkbne',
+//         password: '18d054f18a5e00f4185ffd5f0c97d11850b699d8edc7aa0d4a7b2424f23f67cd',
+//         port: 5432,
+//         database: 'd8ig910bf2pdj5',
+//         server: 'ec2-54-235-181-55.compute-1.amazonaws.com',
+//     });
+
+//     const client = new Client({
 //         user: 'postgres',
 //         password: 'Phuongdo123',
 //         port: 5432,
