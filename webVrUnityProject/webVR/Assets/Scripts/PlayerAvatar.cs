@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
+using Photon.Pun;
 
-public class PlayerAvatar : NetworkBehaviour
+public class PlayerAvatar : MonoBehaviour
 {
     public TransformFollow leftHand;
     public TransformFollow rightHand;
     public TransformFollow head;
+
+    PhotonView PV;
     private void Start()
     {
-        print("is Local Player Authority: " + localPlayerAuthority);
-        print("is Local Player: " + isLocalPlayer);
-        if (!isLocalPlayer)
+        PV = GetComponent<PhotonView>();
+
+        if (!PV.IsMine)
         {
             return;
         }
