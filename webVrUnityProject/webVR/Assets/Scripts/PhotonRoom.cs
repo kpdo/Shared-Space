@@ -97,4 +97,9 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         base.OnPlayerLeftRoom(otherPlayer);
         print(otherPlayer.NickName + " has left the game");
     }
+    [PunRPC]
+    public void UploadObject(string assetID)
+    {
+        //ObjectImporter.DownloadObject(assetID);
+    }
 }
