@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var { Client } = require('pg');
 var port = process.env.PORT || 3000;
 var app = express();
+var cors = require('cors');
 var http = require('http');
 var server = http.Server(app);
 var socket = require('socket.io');
@@ -16,6 +17,9 @@ server.listen(port, ()=>{
 
 // setting up index page
 app.use(express.static('public'));
+
+//Make it CORS complient
+app.use(cors());
 
 // setting up socket
 var io = socket(server);
@@ -45,10 +49,10 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 // uses express for routing
 app.get('/testView1', (req, res)=>{
-    res.render('testView1');    
+    res.render('testView1');
 });
 app.get('/testView2', (req, res)=>{
-    res.render('testView2');    
+    res.render('testView2');
 });
 
 //RESTful Api
@@ -61,7 +65,7 @@ app.get('/testView2', (req, res)=>{
 app.get('/rooms', (req, res)=>{
     // console.log('post body', req.body);
 
-    //uses postgres for database, can use pgAdmin or sqlShell to interact with database manually    
+    //uses postgres for database, can use pgAdmin or sqlShell to interact with database manually
     const client = new Client({
         user: 'vlkjlyefplkbne',
         password: '18d054f18a5e00f4185ffd5f0c97d11850b699d8edc7aa0d4a7b2424f23f67cd',
@@ -79,7 +83,7 @@ app.get('/rooms', (req, res)=>{
     //     server: 'localhost',
     // });
 
-    // uses promise to interact with database 
+    // uses promise to interact with database
 client.connect()
     .then(()=>{
         return client.query('SELECT * FROM rooms');

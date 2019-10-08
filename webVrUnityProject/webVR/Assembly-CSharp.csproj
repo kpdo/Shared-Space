@@ -62,6 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\InfoGamerPhoton\Scripts\CustomMatchmaking\CustomMatchmakingLobbyController.cs" />
+    <Compile Include="Assets\InfoGamerPhoton\Scripts\CustomMatchmaking\CustomMatchmakingRoomController.cs" />
+    <Compile Include="Assets\InfoGamerPhoton\Scripts\CustomMatchmaking\RoomButton.cs" />
+    <Compile Include="Assets\InfoGamerPhoton\Scripts\GameSetupController.cs" />
+    <Compile Include="Assets\InfoGamerPhoton\Scripts\NetworkController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -77,11 +82,13 @@
     <Compile Include="Assets\Scripts\CreateAssetBundle.cs" />
     <Compile Include="Assets\Scripts\ObjectImport.cs" />
     <Compile Include="Assets\Scripts\ObjectImporter.cs" />
+    <Compile Include="Assets\Scripts\ObjectUploader.cs" />
     <Compile Include="Assets\Scripts\PhotonLobby.cs" />
     <Compile Include="Assets\Scripts\PhotonRoom.cs" />
     <Compile Include="Assets\Scripts\PlayerAvatar.cs" />
     <Compile Include="Assets\Scripts\PlayerPositions.cs" />
     <Compile Include="Assets\Scripts\PolyAddButton.cs" />
+    <Compile Include="Assets\Scripts\RotateCamera.cs" />
     <Compile Include="Assets\Scripts\TransformFollow.cs" />
     <Compile Include="Assets\WebVR\Scripts\ControllerInteraction.cs" />
     <Compile Include="Assets\WebVR\Scripts\Input\FreeFlightController.cs" />
@@ -96,6 +103,7 @@
     <Compile Include="Assets\WebVR\Scripts\WebVRUI.cs" />
     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
+    <None Include="Assets\Models\LowPolyOfficeProps_LITE\About.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />

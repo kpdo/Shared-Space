@@ -5,6 +5,7 @@ using AsImpL;
 
 public class ObjectImport : MonoBehaviour
 {
+    public static ObjectImport instance;
     public ObjectImporter importer;
 
     [Tooltip("Default import options")]
@@ -12,6 +13,11 @@ public class ObjectImport : MonoBehaviour
 
     [SerializeField]
     private PathSettings pathSettings = null;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public string RootPath
     {

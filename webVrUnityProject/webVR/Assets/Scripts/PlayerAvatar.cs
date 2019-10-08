@@ -14,7 +14,7 @@ public class PlayerAvatar : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
 
-        if (!PV.IsMine)
+        if (!PV.IsMine || AvatarHandler.instance == null)
         {
             return;
         }

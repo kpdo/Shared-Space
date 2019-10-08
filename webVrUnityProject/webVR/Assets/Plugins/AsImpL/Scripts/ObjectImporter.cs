@@ -359,8 +359,8 @@ namespace AsImpL
                         break;
                     // TODO: add mode formats here...
                     default:
-                        Debug.LogErrorFormat("File format not supported ({0})", ext);
-                        return null;
+                        loader = gameObject.AddComponent<LoaderObj>();
+                        break;
                 }
             }
             loader.ModelCreated += OnModelCreated;

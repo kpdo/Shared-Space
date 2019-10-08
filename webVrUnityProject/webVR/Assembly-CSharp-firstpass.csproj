@@ -85,6 +85,10 @@
     <Compile Include="Assets\Plugins\AsImpL\Scripts\ObjectImporter.cs" />
     <Compile Include="Assets\Plugins\AsImpL\Scripts\ObjectImporterUI.cs" />
     <Compile Include="Assets\Plugins\AsImpL\Scripts\PathSettings.cs" />
+    <Compile Include="Assets\Plugins\MagicMirror\Demo\DemoScript.cs" />
+    <Compile Include="Assets\Plugins\MagicMirror\Prefab\MirrorCameraScript.cs" />
+    <Compile Include="Assets\Plugins\MagicMirror\Prefab\MirrorReflectionScript.cs" />
+    <Compile Include="Assets\Plugins\MagicMirror\Prefab\MirrorScript.cs" />
     <Compile Include="Assets\Plugins\OBJImport\CharWordReader.cs" />
     <Compile Include="Assets\Plugins\OBJImport\MTLLoader.cs" />
     <Compile Include="Assets\Plugins\OBJImport\OBJLoader.cs" />
@@ -101,7 +105,11 @@
     <Compile Include="Assets\Plugins\OBJImport\TextureLoader\ImageLoaderHelper.cs" />
     <Compile Include="Assets\Plugins\OBJImport\TextureLoader\ImageUtils.cs" />
     <Compile Include="Assets\Plugins\OBJImport\TextureLoader\TGALoader.cs" />
+    <None Include="Assets\Plugins\MagicMirror\Prefab\MirrorShaderOld.shader" />
     <None Include="Assets\Plugins\AsImpL\Resources\Shaders\SimpleVertexColorsShader.shader" />
+    <None Include="Assets\Plugins\MagicMirror\Prefab\MirrorShaderBumpMap.shader" />
+    <None Include="Assets\Plugins\MagicMirror\Prefab\Readme.txt" />
+    <None Include="Assets\Plugins\MagicMirror\Prefab\MirrorShader.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/steph/OneDrive/Desktop/Capstone Project/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
