@@ -404,6 +404,7 @@ namespace AsImpL
 
         protected virtual void OnLoaded(GameObject obj, string absolutePath)
         {
+            obj.transform.GetComponentsInChildren<MeshRenderer>()[0].gameObject.tag = "Interactable";
             if (obj == null)
             {
                 if (ModelError != null)
@@ -443,6 +444,7 @@ namespace AsImpL
 
         protected virtual void OnCreated(GameObject obj, string absolutePath)
         {
+           
             if (obj == null)
             {
                 if (ModelError != null)
