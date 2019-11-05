@@ -5,7 +5,7 @@ using UnityEngine;
 public class RemoveObject : MonoBehaviour
 {
     public GameObject selectedObject;
-
+    public GameObject previousObject;
     // Update is called once per frame
     void Update()
     {
@@ -15,8 +15,11 @@ public class RemoveObject : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
                 if (hit.collider != null && hit.collider.gameObject.CompareTag("Interactable"))
+                {
                     selectedObject = hit.collider.gameObject;
-                    //hit.collider.gameObject.SetActive(false);
+                    previousObject = selectedObject;
+                }
+            //hit.collider.gameObject.SetActive(false);
         }
 
         if (Input.GetMouseButton(0))
@@ -37,5 +40,9 @@ public class RemoveObject : MonoBehaviour
             GetComponentInChildren<FreeFlightController>().rotationEnabled = true;
             selectedObject = null;
         }
+    }
+    public void DeleteObject()
+    {
+        previousObject.SetActive(false);
     }
 }

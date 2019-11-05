@@ -7,6 +7,7 @@ public class ObjectImport : MonoBehaviour
 {
     public static ObjectImport instance;
     public ObjectImporter importer;
+    public UnityEngine.UI.ScrollRect catalogContainer;
 
     [Tooltip("Default import options")]
     public ImportOptions defaultImportOptions = new ImportOptions();
@@ -44,5 +45,8 @@ public class ObjectImport : MonoBehaviour
         }
         ImportOptions options = defaultImportOptions;
         importer.ImportModelAsync("Model", filePath, transform, options);
+        GameObject text = Instantiate(new GameObject());
+        text.AddComponent<UnityEngine.UI.Text>().text = filePath;
+        text.transform.SetParent(catalogContainer.content);
     }
 }

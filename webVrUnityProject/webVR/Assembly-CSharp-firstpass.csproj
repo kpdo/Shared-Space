@@ -114,14 +114,8 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Formats.Fbx.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -135,23 +129,29 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Fbx">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Fbx">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Formats.Fbx.Runtime">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-weaver.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
