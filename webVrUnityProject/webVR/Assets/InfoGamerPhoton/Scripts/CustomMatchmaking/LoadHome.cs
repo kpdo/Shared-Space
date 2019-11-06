@@ -2,8 +2,10 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class LoadSceneCustomMatchmakingMenuDemo : MonoBehaviour
+public class LoadHome : MonoBehaviour
 {
     public Button yourButton;
 
@@ -15,6 +17,8 @@ public class LoadSceneCustomMatchmakingMenuDemo : MonoBehaviour
 
     void LoadSceneStart()
     {
+        PhotonNetwork.Disconnect();
+        PhotonNetwork.LeaveLobby();
         SceneManager.LoadScene("CustomMatchmakingMenuDemo");
     }
 }
