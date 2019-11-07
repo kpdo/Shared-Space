@@ -7,6 +7,8 @@ public class ObjectImport : MonoBehaviour
 {
     public static ObjectImport instance;
     public ObjectImporter importer;
+    public GameObject catalogObjPrefab;
+    public UnityEngine.UI.ScrollRect catalogContainer;
 
     [Tooltip("Default import options")]
     public ImportOptions defaultImportOptions = new ImportOptions();
@@ -44,5 +46,13 @@ public class ObjectImport : MonoBehaviour
         }
         ImportOptions options = defaultImportOptions;
         importer.ImportModelAsync("Model", filePath, transform, options);
+        GameObject text = Instantiate(catalogObjPrefab, catalogContainer.content);
+        int pFrom = filePath.IndexOf("/o/") +3;
+        int pTo = filePath.LastIndexOf(".obj");
+
+        string fileName = filePath.Substring(pFrom, pTo - pFrom);
+
+
+        text.GetComponent<UnityEngine.UI.Text>().text = fileName;
     }
 }

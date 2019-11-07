@@ -271,6 +271,7 @@ namespace AsImpL
                 Debug.LogFormat("OBJ files loaded in {0} seconds", Time.realtimeSinceStartup - startTime);
                 startTime = Time.realtimeSinceStartup;
                 GameObject loadedObj = Loader.GetModelByPath(absolutePath);
+                loadedObj.tag = "Interactable";
 
                 importMessage = "Creating mesh assets...";
                 importPhase = ImportPhase.AssetBuild;

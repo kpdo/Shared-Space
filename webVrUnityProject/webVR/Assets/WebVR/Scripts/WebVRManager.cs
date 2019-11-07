@@ -21,7 +21,7 @@ public class WebVRManager : MonoBehaviour
     public TrackingSpaceType TrackingSpace = TrackingSpaceType.RoomScale;
 
     private static string GlobalName = "WebVRCameraSet";
-    private static WebVRManager instance;
+    public static WebVRManager instance;
     [HideInInspector]
     public WebVRState vrState = WebVRState.NORMAL;
 
