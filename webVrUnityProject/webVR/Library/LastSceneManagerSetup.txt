@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/InfoGamerPhoton/Scenes/Demos/MultiplayerSceneDemo.unity
+- path: Assets/Materials/Scenes/Demos/MultiplayerSceneDemo.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
