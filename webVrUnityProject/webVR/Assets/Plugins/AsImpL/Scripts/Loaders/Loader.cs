@@ -404,7 +404,11 @@ namespace AsImpL
 
         protected virtual void OnLoaded(GameObject obj, string absolutePath)
         {
-            obj.transform.GetComponentsInChildren<MeshRenderer>()[0].gameObject.tag = "Interactable";
+            foreach(var m in obj.transform.GetComponentsInChildren<MeshRenderer>())
+            {
+                m.gameObject.tag = "Interactable";
+            }
+            
             if (obj == null)
             {
                 if (ModelError != null)

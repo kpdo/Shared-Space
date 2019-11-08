@@ -20,7 +20,11 @@ public class ObjectImport : MonoBehaviour
     {
         instance = this;
     }
+    private void Start()
+    {
+        importer.ImportedModel += ImportedModel;
 
+    }
     public string RootPath
     {
         get
@@ -46,13 +50,22 @@ public class ObjectImport : MonoBehaviour
         }
         ImportOptions options = defaultImportOptions;
         importer.ImportModelAsync("Model", filePath, transform, options);
-        GameObject text = Instantiate(catalogObjPrefab, catalogContainer.content);
-        int pFrom = filePath.IndexOf("/o/") +3;
+        
+
+    }
+
+    private void ImportedModel(GameObject model, string filePath)
+    {
+
+        GameObject catalogButton = Instantiate(catalogObjPrefab);
+        catalogButton.transform.SetParent(catalogContainer.content, false);
         int pTo = filePath.LastIndexOf(".obj");
-
-        string fileName = filePath.Substring(pFrom, pTo - pFrom);
-
-
-        text.GetComponent<UnityEngine.UI.Text>().text = fileName;
+        string fileName = filePath.Substring(0, pTo);
+        print(fileName);
+        int pFrom = filePath.LastIndexOf("/")+1;
+        print(pFrom);
+        fileName = fileName.Substring(pFrom);
+        model.name = fileName;
+        catalogButton.GetComponent<CatalogObject>().SetObject(fileName, model);
     }
 }

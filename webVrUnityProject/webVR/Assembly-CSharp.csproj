@@ -83,17 +83,18 @@
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\script.cs" />
     <Compile Include="Assets\Scripts\AvatarHandler.cs" />
+    <Compile Include="Assets\Scripts\CatalogObject.cs" />
     <Compile Include="Assets\Scripts\CreateAssetBundle.cs" />
+    <Compile Include="Assets\Scripts\HoldableButton.cs" />
     <Compile Include="Assets\Scripts\InfiniteGrid.cs" />
     <Compile Include="Assets\Scripts\ObjectImport.cs" />
-    <Compile Include="Assets\Scripts\ObjectImporter.cs" />
+    <Compile Include="Assets\Scripts\ObjectManipulation.cs" />
     <Compile Include="Assets\Scripts\ObjectUploader.cs" />
     <Compile Include="Assets\Scripts\PhotonLobby.cs" />
     <Compile Include="Assets\Scripts\PhotonRoom.cs" />
     <Compile Include="Assets\Scripts\PlayerAvatar.cs" />
     <Compile Include="Assets\Scripts\PlayerPositions.cs" />
     <Compile Include="Assets\Scripts\PolyAddButton.cs" />
-    <Compile Include="Assets\Scripts\RemoveObject.cs" />
     <Compile Include="Assets\Scripts\RotateCamera.cs" />
     <Compile Include="Assets\Scripts\TransformFollow.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
@@ -148,6 +149,7 @@
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Models\LowPolyOfficeProps_LITE\About.txt" />
+    <None Include="Assets\Scripts\Wireframe.cginc" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
@@ -155,12 +157,14 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\Scripts\Outlined.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
+    <None Include="Assets\Scripts\Wireframe.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Forceling\ForcelingWorldGrid\Forceling_WorldGrid.shader" />
@@ -173,8 +177,14 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -188,20 +198,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Formats.Fbx.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
+    <Reference Include="com.unity.multiplayer-weaver.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
@@ -218,6 +222,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
@@ -227,11 +234,8 @@
     <Reference Include="Unity.Formats.Fbx.Runtime">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>C:/Users/steph/Documents/CapstoneProject/Shared-Space/webVrUnityProject/webVR/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>

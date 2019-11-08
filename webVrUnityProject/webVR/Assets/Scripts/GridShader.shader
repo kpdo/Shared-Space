@@ -1,44 +1,64 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿Shader "Grid" {
 
-Shader "Unlit/GridShader"
-{
 	Properties{
-		_Color("Main Color", Color) = (1,1,1,1)
+	  _GridThickness("Grid Thickness", Float) = 0.01
+	  _GridSpacing("Grid Spacing", Float) = 10.0
+	  _GridColour("Grid Colour", Color) = (0.5, 0.5, 0.5, 0.5)
+	  _BaseColour("Base Colour", Color) = (0.0, 0.0, 0.0, 0.0)
 	}
+
 		SubShader{
-			Lighting Off
-			Cull Off
+		  Tags { "Queue" = "Transparent" }
+
+		  Pass {
 			ZWrite Off
-			ZTest always
-			Fog { Mode Off }
+			Blend SrcAlpha OneMinusSrcAlpha
 
-			Tags { "Queue" = "Transparent+1" }
-			Pass {
-				Blend SrcAlpha OneMinusSrcAlpha
-				CGPROGRAM
-					#pragma vertex vert
-					#pragma fragment frag
-					#include "UnityCG.cginc"
+			CGPROGRAM
 
-					float4 _Color;
+		// Define the vertex and fragment shader functions
+		#pragma vertex vert
+		#pragma fragment frag
 
-					struct v2f {
-						float4 pos : SV_POSITION;
-						float4 col : COLOR;
-					};
+		// Access Shaderlab properties
+		uniform float _GridThickness;
+		uniform float _GridSpacing;
+		uniform float4 _GridColour;
+		uniform float4 _BaseColour;
 
-					v2f vert(appdata_full vInput) {
-						v2f OUT;
-						OUT.pos = UnityObjectToClipPos(vInput.vertex);
-						OUT.col = vInput.color;
-						return OUT;
-					}
+		// Input into the vertex shader
+		struct vertexInput {
+			float4 vertex : POSITION;
+		};
 
-					half4 frag(v2f fInput) : COLOR {
-						return _Color * fInput.col;
-					}
-				ENDCG
-			}
+		// Output from vertex shader into fragment shader
+		struct vertexOutput {
+		  float4 pos : SV_POSITION;
+		  float4 worldPos : TEXCOORD0;
+		};
+
+		// VERTEX SHADER
+		vertexOutput vert(vertexInput input) {
+		  vertexOutput output;
+		  output.pos = UnityObjectToClipPos(input.vertex);
+		  // Calculate the world position coordinates to pass to the fragment shader
+		  output.worldPos = mul(unity_ObjectToWorld, input.vertex);
+		  return output;
+		}
+
+		// FRAGMENT SHADER
+		float4 frag(vertexOutput input) : COLOR {
+		  if (frac(input.worldPos.x / _GridSpacing) < _GridThickness || frac(input.worldPos.y / _GridSpacing) < _GridThickness) {
+			return _GridColour;
+		  }
+		 else if (frac(input.worldPos.x / _GridSpacing) < _GridThickness || frac(input.worldPos.z / _GridSpacing) < _GridThickness) {
+			return _GridColour;
+		 }
+		  else {
+			return _BaseColour;
+		  }
+		}
+	ENDCG
 	}
-		FallBack "Diffuse"
+	}
 }

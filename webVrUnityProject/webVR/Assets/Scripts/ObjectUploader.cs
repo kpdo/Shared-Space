@@ -7,7 +7,9 @@ using Photon.Realtime;
 public class ObjectUploader : MonoBehaviourPun
 {
     public static ObjectUploader singleton;
-
+    public bool noPhoton;
+    public bool spawnAtStart;
+    public List<string> startModelUrls;
     
     private void Awake()
     {
@@ -15,11 +17,22 @@ public class ObjectUploader : MonoBehaviourPun
             Destroy(this);
         singleton = this;
     }
+    private void Start()
+    {
+        if(spawnAtStart)
+        foreach(string s in startModelUrls) { UploadModel(s); }
+    }
 
     //Called by someone who wants to set the score
     public void UploadModel(string url)
     {
-        this.photonView.RPC("ImportModel", RpcTarget.All, url);
+        if(!noPhoton)
+            this.photonView.RPC("ImportModel", RpcTarget.All, url);
+        else
+        {
+            ImportModel(url);
+        }
+        
     }
 
     [PunRPC]

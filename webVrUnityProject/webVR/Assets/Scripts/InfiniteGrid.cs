@@ -15,6 +15,7 @@ public class InfiniteGrid : MonoBehaviour
 
     void Start()
     {
+        
         cam = GetComponent<Camera>();
     }
 
