@@ -15,7 +15,7 @@ MonoBehaviour:
   AppSettings:
     AppIdRealtime: 6b5ab528-5f3c-4939-ae5d-50d340302b8e
     AppIdChat: 7bff889f-9e46-4a6b-9a34-fe3ea5579843
-    AppIdVoice: 
+    AppIdVoice: 0f253429-2629-4005-9b42-683521a03457
     AppVersion: 
     UseNameServer: 1
     FixedRegion: 
@@ -36,5 +36,6 @@ MonoBehaviour:
   - RespawnSpaceship
   - UploadObject
   - ImportModel
+  - ChangeColour
   DisableAutoOpenWizard: 1
   ShowSettings: 1
