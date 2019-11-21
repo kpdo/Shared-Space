@@ -13,6 +13,7 @@ namespace Photon.Voice.Unity
 
 		public MicWrapper(string device, int suggestedFrequency, ILogger logger)
         {
+            /*
             try
             {
                 this.device = device;
@@ -52,6 +53,7 @@ namespace Photon.Voice.Unity
                 }
                 logger.LogError("[PV] MicWrapper: " + Error);
             }
+            */
         }
 
         public int SamplingRate { get { return Error == null ? this.mic.frequency : 0; } }
@@ -60,7 +62,7 @@ namespace Photon.Voice.Unity
 
         public void Dispose()
         {
-            Microphone.End(this.device);
+            //Microphone.End(this.device);
         }
 
         private int micPrevPos;
@@ -73,7 +75,7 @@ namespace Photon.Voice.Unity
             {
                 return false;
             }
-            int micPos = Microphone.GetPosition(this.device);
+            int micPos = 0;//Microphone.GetPosition(this.device);
             // loop detection
             if (micPos < micPrevPos)
             {
