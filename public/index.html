@@ -12,10 +12,12 @@
           </button>
           <a class="navbar-brand" href="#">SharedSpace</a>
         </div>
+
+        <div id="container">
+            <audio id="gum-local" controls autoplay></audio>
+        </div>
+
         <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-              <audio id="gum-local" controls autoplay></audio>
-          </ul>
           <form class="navbar-form navbar-right search-form" role="Search">
             <input id="file-upload" type="file" onchange="uploadToFirebase()"></input>
           </form>
@@ -44,6 +46,11 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles/webvr.css">
     <script src="lib/telemetry.js"></script>
+    
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="../../../js/lib/ga.js"></script> -->
+    
     <script>
       MozillaResearch.telemetry.start({
         analytics: true,
@@ -114,9 +121,6 @@
     <script src="vendor/webvr-polyfill.min.js"></script>
     <script src="webvr.js"></script>
 
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script src="js/main.js"></script>
-    <script src="../../../js/lib/ga.js"></script>
   </body>
 
 </html>
