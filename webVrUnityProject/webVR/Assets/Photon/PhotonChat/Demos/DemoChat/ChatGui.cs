@@ -375,8 +375,6 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 
 	    this.UserIdText.text = "Connected as "+ this.UserName;
 
-		this.ChatPanel.gameObject.SetActive(true);
-
 		if (this.FriendsList!=null  && this.FriendsList.Length>0)
 		{
 			this.chatClient.AddFriends(this.FriendsList); // Add some users to the server-list to get their status updates

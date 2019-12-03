@@ -7,6 +7,7 @@ public class GameSetupController : MonoBehaviour
     // This script will be added to any multiplayer scene
     void Start()
     {
+
         CreatePlayer(); //Create a networked player object for each player that loads into the multiplayer scenes.
     }
 
