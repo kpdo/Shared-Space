@@ -2,14 +2,14 @@
 <html lang="en">
 
     <nav class="navbar navbar-findcond navbar-fixed-top" style="background-color: black">
-      <div class="container">
+      <div class="container"> 
         <div class="navbar-header">
           <a class="navbar-brand" href="#">SharedSpace</a>
-
-          <audio id="gum-local" controls autoplay></audio>
+          
+          <audio id="gum-local" style="margin-top: 4px;" controls autoplay></audio>
 
           <form class="navbar-form navbar-right search-form" role="Search">
-            <input id="file-upload" type="file" onchange="uploadToFirebase()"></input>
+            <input id="file-upload" type="file" style="margin-top: 4px;" onchange="uploadToFirebase()"></input>
           </form>
         </div>
       </div>
@@ -36,10 +36,6 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles/webvr.css">
     <script src="lib/telemetry.js"></script>
-    
-    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <script src="js/main.js"></script>
-    <!-- <script src="../../../js/lib/ga.js"></script> -->
     
     <script>
       MozillaResearch.telemetry.start({
@@ -111,6 +107,9 @@
     <script src="vendor/webvr-polyfill.min.js"></script>
     <script src="webvr.js"></script>
 
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="../../../js/lib/ga.js"></script> -->
   </body>
 
 </html>
