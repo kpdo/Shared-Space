@@ -11,8 +11,6 @@
 // Put variables in global scope to make them available to the browser console.
 const audio = document.querySelector('audio');
 
-console.log("in!");
-
 const constraints = window.constraints = {
   audio: true,
   video: false
