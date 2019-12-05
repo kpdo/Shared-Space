@@ -1,50 +1,5 @@
 <!doctype html>
 <html lang="en">
-
-    <nav class="navbar navbar-findcond navbar-fixed-top" style="background-color: black">
-        <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">SharedSpace</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Friend <span class="badge">0</span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Music</span> sayfası <span class="badge">Video</span> sayfasında etiketlendi</a></li>
-                <li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Music</span> sayfasında iletiniz beğenildi</a></li>
-                <li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Video</span> sayfasında iletiniz beğenildi</a></li>
-                <li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Game</span> sayfasında iletiniz beğenildi</a></li>
-              </ul>
-            </li>
-            <li class="active"><a href="/rooms">Room</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">B-Team</a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Geri bildirim</a></li>
-                <li><a href="#">Yardım</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Ayarlar</a></li>
-                <li><a href="#exit">Çıkış yap</a></li>
-              </ul>
-            </li>
-            <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Logout</a>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right search-form" role="Search">
-            <input id="file-upload" type="file" onchange="uploadToFirebase()"></input>
-          </form>
-        </div>
-      </div>
-    </nav>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,15 +8,7 @@
     <meta http-equiv="origin-trial" data-feature="Generic Sensors" data-expires="2018-04-10" content="Aokv0ODVMUPIswIBi6DnpAIjhWefEd8gD8GpVgdYgETj0C5+/3kKMzZE/FOrBwHcpBO6LHuVRrIw3yOT8EMmJAYAAABQeyJvcmlnaW4iOiJodHRwczovL2dpdGh1Yi5pbzo0NDMiLCJmZWF0dXJlIjoiR2VuZXJpY1NlbnNvciIsImV4cGlyeSI6MTUyMzMxODQwMH0=">
     <!-- Origin Trial Token, feature = WebVR (For Chrome M62+), origin = https://github.io, expires = 2018-05-07 -->
     <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M62+)" data-expires="2018-05-07" content="AgINztgDnjFV8da2D9SSzIITBRlHX8mduCR7DXfENxjr9ALduKOxBDdn2n66auQSlljVyhnRWWerxC0BWbE8pAoAAABOeyJvcmlnaW4iOiJodHRwczovL2dpdGh1Yi5pbzo0NDMiLCJmZWF0dXJlIjoiV2ViVlIxLjFNNjIiLCJleHBpcnkiOjE1MjU3MjU4MDh9">
-
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
-    <script src="uploadModel.js"></script>
-    <title>SharedSpace | webVR</title>
+    <title>Sunny Desert | webVR</title>
     <meta name="description" content="Complete interactive 3D scene demo made in Unity and exported to WebVR with the WebVR template of the Unity WebVR assets">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles/webvr.css">
@@ -90,6 +37,7 @@
           },
           onProgress: unityProgress
         });
+
         function unityProgress (gameInstance, progress) {
           if (!gameInstance.progress) {
             gameInstance.loader = document.getElementById('loader');
@@ -111,10 +59,9 @@
       <div id="loading" class="loading">Loading</div>
       <div id="progress" class="progress"></div>
     </div>
-    <div style="margin-top:3.2rem;">
-      <div id="game">
-        <div id="gameContainer"></div>
-      </div>
+
+    <div id="game">
+      <div id="gameContainer"></div>
     </div>
 
     <div id="instruction">
