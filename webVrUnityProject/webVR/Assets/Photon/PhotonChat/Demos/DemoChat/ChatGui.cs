@@ -141,11 +141,14 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 		{
 			Debug.LogError("You need to set the chat app ID in the PhotonServerSettings file in order to continue.");
 		}
+        Connect();
 	}
 
 	public void Connect()
 	{
-		this.UserIdFormPanel.gameObject.SetActive(false);
+        this.UserName = PlayerPrefs.GetString("NickName"); //get saved player name
+
+        this.UserIdFormPanel.gameObject.SetActive(false);
 
 		this.chatClient = new ChatClient(this);
         #if !UNITY_WEBGL
@@ -371,8 +374,6 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 	    this.ConnectingLabel.SetActive(false);
 
 	    this.UserIdText.text = "Connected as "+ this.UserName;
-
-		this.ChatPanel.gameObject.SetActive(true);
 
 		if (this.FriendsList!=null  && this.FriendsList.Length>0)
 		{
