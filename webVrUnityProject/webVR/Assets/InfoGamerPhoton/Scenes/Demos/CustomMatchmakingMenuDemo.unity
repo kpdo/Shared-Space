@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: cc5895c56417ee54f914091f516f3be6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1796,10 +1796,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Room chat\r\n\nThe Chat is located on the bottom middle of the screen.
-    The Chat is initially hidden, but can be opened by pressing (23). Pressing (23)
+    The Chat is initially hidden, but can be opened by pressing (24). Pressing (24)
     again when the Chat is open will close it. You can see what others have typed
-    in (24). You can send messages by typing your message into (25) and pressing (26).
-    Pressing (27) will display all available chat commands in (24).\r"
+    in (25). You can send messages by typing your message into (26) and pressing (27).
+    Pressing (28) will display all available chat commands in (25).\r"
 --- !u!222 &519933315
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2002,7 +2002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 34, y: -13.916}
+  m_AnchoredPosition: {x: 34, y: -13.916016}
   m_SizeDelta: {x: 367, y: 151.1}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &535292664
@@ -2506,7 +2506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 7832efede01fac04392f1408486faa78, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 7e7b7a03925259048a4fee1c164651f9, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 918573e4c405f5c4db6a254c1384f15c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4617,7 +4617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: fab1b3cb37cddb544a2f247d7e063ee6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4988,8 +4988,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Room catalog\r\n\nThe Catalog is located on the top right side of the screen.
-    A list of all the currently loaded 3D models can be seen in (18). You can hide
-    the catalog by pressing (17). You can re-open the catalog by pressing (16). You
+    A list of all the currently loaded 3D models can be seen in (19). You can hide
+    the catalog by pressing (18). You can re-open the catalog by pressing (17). You
     can also show and hide models by clicking on their names in the catalog. Visible
     models will have their names highlighted in orange, while invisible models\u2019
     names will be highlighted in white.\r"
@@ -5056,7 +5056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 2190c068d43622f4ba2549ad90f34fe8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5246,7 +5246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 98f2a3205cebd964cb50f0d55fb0b71a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -6837,8 +6837,8 @@ MonoBehaviour:
     of the screen. The 3D Controls are initially hidden, but will show up when you
     select a model by clicking on it in the room. The controls will disappear when
     you deselect that model, and only one model can be selected and manipulated at
-    a time. Pressing (19), (20), and (21) will rotate the model along its local X,
-    Y, and Z axes, respectively. Checking the wireframe checkbox (22) will cause the
+    a time. Pressing (20), (21), and (22) will rotate the model along its local X,
+    Y, and Z axes, respectively. Checking the wireframe checkbox (23) will cause the
     model to be rendered as points and lines.\r"
 --- !u!222 &1956568240
 CanvasRenderer:
@@ -7015,8 +7015,8 @@ MonoBehaviour:
     to an X. You can press (12) again to close the Room Menu. Pressing (13) in the
     menu will cause you to leave the room and return to the Main Lobby. Pressing (14)
     in the menu will cause you to leave the room and return to the Start Screen. Pressing
-    (15) in the menu will open a dialog box where you can select and import a 3D model
-    into the room.\r"
+    (15) in the menu will open an input field (16) where you can enter the path of
+    a 3D model you want to import into the room.\r"
 --- !u!222 &2069207106
 CanvasRenderer:
   m_ObjectHideFlags: 0
