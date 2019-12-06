@@ -111,6 +111,7 @@
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\MicrophoneDropdownFiller.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\RemoteSpeakerUI.cs" />
     <Compile Include="Assets\script.cs" />
+    <Compile Include="Assets\Scripts\AutoRotate.cs" />
     <Compile Include="Assets\Scripts\AvatarHandler.cs" />
     <Compile Include="Assets\Scripts\CatalogObject.cs" />
     <Compile Include="Assets\Scripts\CreateAssetBundle.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Assets\Scripts\PolyAddButton.cs" />
     <Compile Include="Assets\Scripts\RotateCamera.cs" />
     <Compile Include="Assets\Scripts\TransformFollow.cs" />
+    <Compile Include="Assets\Scripts\TransformSync.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

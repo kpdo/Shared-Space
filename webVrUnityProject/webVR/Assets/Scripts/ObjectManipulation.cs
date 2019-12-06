@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 public class ObjectManipulation : MonoBehaviour
 {
     public float rotateSpeed =180;
@@ -14,6 +15,8 @@ public class ObjectManipulation : MonoBehaviour
     public Material prevMaterial;
     public Text modelNameDisplay;
     public Toggle tgl_wireframe;
+    public PhotonView parentPV;
+
     // Update is called once per frame
     private void Start()
     {
@@ -64,7 +67,9 @@ public class ObjectManipulation : MonoBehaviour
                 float point = 0f;
                 GetComponentInChildren<FreeFlightController>().rotationEnabled = false;
                 if (plane.Raycast(ray, out point))
-                    selectedObject.transform.position = ray.GetPoint(point);
+                    parentPV = selectedObject.GetComponentInParent<PhotonView>();
+                    parentPV.transform.position = ray.GetPoint(point);
+
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -72,6 +77,8 @@ public class ObjectManipulation : MonoBehaviour
             GetComponentInChildren<FreeFlightController>().rotationEnabled = true;
 
             selectedObject = null;
+            if(parentPV)
+                parentPV.RPC("SyncTransform", RpcTarget.Others, parentPV.gameObject.name);
         }
         GetComponentInChildren<FreeFlightController>().translationEnabled = !Input.GetKey(KeyCode.LeftShift);
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.UpArrow))
@@ -118,7 +125,8 @@ public class ObjectManipulation : MonoBehaviour
         else if (a == "z") axis = Vector3.forward;
         
         float s = rotateSpeed * Time.deltaTime;
-        previousObject.transform.Rotate(s*axis);
+        parentPV.transform.Rotate(s*axis);
+
     }
     public void SetWireframe(bool value)
     {

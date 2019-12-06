@@ -1718,7 +1718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 177, y: -7.7}
+  m_AnchoredPosition: {x: 177, y: -7.700012}
   m_SizeDelta: {x: 537.59, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &162519642
@@ -1874,7 +1874,6 @@ MonoBehaviour:
   startModelUrls:
   - https://raw.githubusercontent.com/Melown/vts-browser-js/master/demos/meshes-obj-import/models/car-alpine/alpine.obj
   - https://raw.githubusercontent.com/assimp/assimp/master/test/models/OBJ/WusonOBJ.obj
-  - https://raw.githubusercontent.com/gpvigano/AsImpL/master/models/OBJ_test/objtest_yup.obj
 --- !u!114 &190482943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,36 +4922,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &544180253
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1131057147}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 544180254}
-  m_Layer: 0
-  m_Name: HalfSphere (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &544180254
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1131057147}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544180253}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546526197
 GameObject:
   m_ObjectHideFlags: 0
@@ -13326,8 +13295,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 904871255}
   m_HandleRect: {fileID: 904871254}
   m_Direction: 2
-  m_Value: 1.0000088
-  m_Size: 0.9770142
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13922,7 +13891,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 446600029}
   m_HandleRect: {fileID: 446600028}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -19136,6 +19105,7 @@ MonoBehaviour:
   prevMaterial: {fileID: 0}
   modelNameDisplay: {fileID: 1053136147}
   tgl_wireframe: {fileID: 653231877}
+  parentPV: {fileID: 0}
 --- !u!1 &2080250211
 GameObject:
   m_ObjectHideFlags: 0

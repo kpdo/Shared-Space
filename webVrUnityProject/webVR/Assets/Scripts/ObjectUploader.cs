@@ -19,7 +19,7 @@ public class ObjectUploader : MonoBehaviourPun
     }
     private void Start()
     {
-        if(spawnAtStart)
+        if(spawnAtStart && PhotonNetwork.IsMasterClient)
         foreach(string s in startModelUrls) { UploadModel(s); }
     }
 
@@ -40,5 +40,7 @@ public class ObjectUploader : MonoBehaviourPun
     {
         ObjectImport.instance.ImportModelURL(url);
         //Do something with the score
+
     }
+
 }

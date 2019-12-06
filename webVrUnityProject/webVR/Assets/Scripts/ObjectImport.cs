@@ -67,6 +67,5 @@ public class ObjectImport : MonoBehaviour
         fileName = fileName.Substring(pFrom);
         model.name = fileName;
         catalogButton.GetComponent<CatalogObject>().SetObject(fileName, model);
-        model.GetComponentInChildren<MeshRenderer>().gameObject.AddComponent<Photon.Pun.PhotonTransformView>();
     }
 }

@@ -181,6 +181,7 @@ namespace AsImpL
                 yield return newObj;
                 OnCreated(newObj, absolutePath);
                 newObj.name = objName;
+               
 
                 if (parentObj != null) newObj.transform.parent = parentObj.transform;
                 totalProgress.singleProgress.Remove(objLoadingProgress);
@@ -355,7 +356,8 @@ namespace AsImpL
 
             objLoadingProgress.message = "Building scene objects...";
 
-            GameObject newObj = new GameObject(objName);
+            GameObject newObj = Photon.Pun.PhotonNetwork.Instantiate("BaseModel",Vector3.zero, Quaternion.identity);
+            newObj.name = objName;
             if (buildOptions.hideWhileLoading)
             {
                 newObj.SetActive(false);
