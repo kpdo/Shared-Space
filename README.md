@@ -15,3 +15,6 @@
   
 ##### Tutorial
   - https://docs.google.com/document/d/1l4qXzexzqWz6-bade4yPHqGpDPAIEDhIPtjI78d9pWc/edit
+ 
+#### Project Page
+  - https://docs.google.com/document/d/1KLxNxUusyQF51jh7A3VGNAk2sG3gKZn4eueb3yGBPPc/edit
